@@ -1,6 +1,3 @@
-
--- Use the `ref` function to select from other models
-
-select *
-from {{ ref('my_first_dbt_model') }}
-where id = 1
+select 1 as id, 'active' as status
+union all
+select 2 as id, 'pending' as status
